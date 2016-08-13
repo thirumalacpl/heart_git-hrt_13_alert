@@ -4,6 +4,12 @@ $(document).on('pageshow', '#cond_patient_details', function(){
 
 condition_emer =  JSON.parse(sessionStorage.getItem("emergency")); 
 
+  $(document).off('click', '#oktoquestio').on('click', '#oktoquestio', function() {
+
+$.mobile.changePage($('#question_li'), { transition: "none", changeHash: true, reverse: false });
+
+     return false;
+});
 
 //alert(condition_emer+'condition');
 

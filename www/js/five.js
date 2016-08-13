@@ -5,6 +5,13 @@ $(document).on('pageshow', '#question_li', function(){
 		activities_details_ag = JSON.parse(sessionStorage.getItem("activities_details_arrayaa"));	
 		pat_id_lasts = JSON.parse(sessionStorage.getItem("pat_id_lasts"));
 
+		  $(document).off('click', '#tosear_nearby_mapp').on('click', '#tosear_nearby_mapp', function() {
+
+$.mobile.changePage($('#sear_nearby_mapp'), { transition: "none", changeHash: true, reverse: false });
+
+     return false;
+});
+
 $('#chestpain').empty();
 $('#painstrt').empty();
 $('#painstrt3').empty();
